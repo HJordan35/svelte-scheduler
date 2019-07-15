@@ -1,5 +1,9 @@
+<script>
+  import MainCard from "./MainCard.svelte";
+</script>
+
 <style type="text/scss">
-  @import '../../scss/abstracts/variables';
+  @import "../../scss/abstracts/variables";
   .container {
     grid-area: content;
     background-color: $app-background;
@@ -11,5 +15,5 @@
 </style>
 
 <div class="container">
-    <h1>This is the main layout</h1>
+  <MainCard />
 </div>

@@ -9,15 +9,16 @@
 </script>
 
 <style type="text/scss" global>
-  body {
-    padding: 0px;
-  }
+  :global(body) {
+    margin: 0;
+    padding: 0;
+	}
   .app {
     display: grid;
 
     grid-template-areas:
       "nav header header"
-      "nav content side"
+      "nav content content"
       "nav footer footer";
 
     grid-template-columns: 200px 1fr 200px;
@@ -40,7 +41,7 @@
         auto /* Header */
         minmax(75px, auto) /* Nav */
         1fr /* Content */
-        minmax(75px, auto) /* Sidebar */
+        // minmax(75px, auto) /* Sidebar */
         auto; /* Footer */
     }
   }
@@ -50,6 +51,6 @@
   <Header headline="Set Calendar" />
   <LeftNav />
   <MainLayout />
-  <Aside />
+  <!-- <Aside /> -->
   <Footer />
 </div>

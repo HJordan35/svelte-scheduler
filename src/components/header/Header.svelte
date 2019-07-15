@@ -6,8 +6,11 @@
   @import "../../scss/abstracts/variables";
   .container {
     grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     h1 {
-      color: $app-light-text;
+      color: $app-dark;
       margin: 0px;
     }
   }

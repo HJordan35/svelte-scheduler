@@ -2,6 +2,7 @@
   @import '../../scss/abstracts/variables';
   .container {
     grid-area: side;
+    background-color: $app-background;
     h1 {
       color: $app-dark;
       margin: 0px;
