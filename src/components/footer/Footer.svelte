@@ -1,11 +1,7 @@
-<script>
-  export let headline = "Headline";
-</script>
-
 <style type="text/scss">
-  @import "../../scss/abstracts/variables";
+  @import '../../scss/abstracts/variables';
   .container {
-    grid-area: header;
+    grid-area: footer;
     h1 {
       color: $app-light-text;
       margin: 0px;
@@ -14,5 +10,4 @@
 </style>
 
 <div class="container">
-  <h1>{headline}</h1>
 </div>
