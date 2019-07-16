@@ -22,7 +22,7 @@
       "nav footer footer";
 
     grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: 85px 1fr auto;
+    grid-template-rows: 85px 1fr 24px;
 
     height: 100vh;
   }
