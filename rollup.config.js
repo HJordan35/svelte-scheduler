@@ -11,7 +11,7 @@ const production = !process.env.ROLLUP_WATCH;
 
 let includePathOptions = {
   include: {},
-  paths: ['src/scss', 'src/components'],
+  paths: ['src/scss', 'src/components', 'src/constants'],
   external: [],
   extensions: ['.scss', '.svelte']
 };

@@ -1,0 +1,4 @@
+export const APP_COLORS = {
+    APP_PRIMARY_COLOR: "#001628",
+    APP_SECONDARY_COLOR: "#f5c381"
+}
