@@ -71,6 +71,6 @@ and a child icon
 -->
 {#if showButton}
   <div class="fixed-button" in:fly="{{ y: 200 }}">
-    <slot />
+    <slot></slot>
   </div>
 {/if}

@@ -4,7 +4,7 @@
     grid-area: side;
     background-color: $app-background;
     h1 {
-      color: $app-dark;
+      color: $app-primary;
       margin: 0px;
     }
   }
