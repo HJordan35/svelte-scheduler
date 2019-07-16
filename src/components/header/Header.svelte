@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     h1 {
-      color: $app-dark;
+      color: $app-primary;
       margin: 0px;
     }
   }
