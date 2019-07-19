@@ -14,6 +14,9 @@
     setTimeout(() => {
       showButton = true;
     }, 1000);
+
+    // Event Listener to toggle an open pop-container
+    document.getElementById("float-container").addEventListener("toggle-pop", togglePop);
   });
 
   const togglePop = () => {
@@ -89,15 +92,17 @@ Button with is set in a fixed position to its parent relative
 container and can be passed positional attributes, a click handler
 and a child icon
 -->
-{#if showPop}
-  <div
-    class="fixed-pop"
-    transition:slide="{{delay: 250, duration: 300, easing: quintOut }}">
-    <slot name="pop" />
-  </div>
-{/if}
-{#if showButton}
-  <div class="fixed-button" in:fly={{ y: 200 }} on:click={togglePop}>
-    <slot name="icon" />
-  </div>
-{/if}
+<div id="float-container">
+  {#if showPop}
+    <div
+      class="fixed-pop"
+      transition:slide={{ delay: 250, duration: 300, easing: quintOut }}>
+      <slot name="pop" />
+    </div>
+  {/if}
+  {#if showButton}
+    <div class="fixed-button" in:fly={{ y: 200 }} on:click={togglePop}>
+      <slot name="icon" />
+    </div>
+  {/if}
+</div>

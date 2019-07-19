@@ -24,7 +24,6 @@
      */
     for (let i = 2; i < parsedCSV.length; i++) {
       if (parsedCSV[i][0] !== "") {
-        console.log(parsedCSV[i]);
         peopleCards = [...peopleCards, parsedCSV[i]];
       }
     }
@@ -34,6 +33,7 @@
 <style type="text/scss">
   @import "../../scss/abstracts/variables";
   .container {
+    overflow: scroll;
     grid-area: content;
     display: flex;
     flex-direction: row;

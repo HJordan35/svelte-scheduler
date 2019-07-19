@@ -33,11 +33,15 @@
 
   const broadcastData = (parsed) => {
       let target = document.getElementById("reader");
-      const event = new CustomEvent('csv-loaded', {
+      const loadEvent = new CustomEvent('csv-loaded', {
           detail: parsed,
           bubbles: true
       });
-      target.dispatchEvent(event);
+      const popEvent = new CustomEvent('toggle-pop', {
+          bubbles: true
+      });
+      target.dispatchEvent(popEvent);
+      target.dispatchEvent(loadEvent);
   }
 </script>
 

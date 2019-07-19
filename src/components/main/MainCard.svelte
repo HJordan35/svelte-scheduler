@@ -12,7 +12,7 @@
     height: 50px;
     width: 50px;
     margin: 0;
-    flex: 1 0 200px;
+    flex: 1 1 200px;
     margin: 16px;
     border-radius: 16px;
     background-color: white;
