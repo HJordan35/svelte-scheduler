@@ -1,9 +1,10 @@
 <script>
   import MainCard from "./MainCard.svelte";
   import FloatingButton from "controls/FloatingButton.svelte";
+  import FloatingFileReader from "controls/FloatingFileReader.svelte";
   import Upload from "svgs/Upload.svelte";
 
-  import {APP_COLORS} from "../../constants/AppConstants.js";
+  import { APP_COLORS } from "../../constants/AppConstants.js";
 </script>
 
 <style type="text/scss">
@@ -29,8 +30,11 @@
 <div class="container">
   <MainCard />
   <FloatingButton>
-    <div class="icon-container" on:click="{() => showFileLoader = true}">
-      <Upload width={"32px"} setColor={APP_COLORS.APP_SECONDARY_COLOR} />
+    <div slot="pop">
+      <FloatingFileReader />
     </div>
+      <div slot="icon" class="icon-container">
+        <Upload width={'32px'} setColor={APP_COLORS.APP_SECONDARY_COLOR} />
+      </div>
   </FloatingButton>
 </div>
