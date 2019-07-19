@@ -19,12 +19,12 @@
     grid-template-areas:
       "nav header header"
       "nav content content"
-      "nav footer footer";
+      "nav content content";
 
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: 85px 1fr 24px;
 
-    height: 100vh;
+    min-height: 100vh;
   }
 
   @media (max-width: 768px) {
@@ -42,7 +42,7 @@
         minmax(75px, auto) /* Nav */
         1fr /* Content */
         // minmax(75px, auto) /* Sidebar */
-        auto; /* Footer */
+        // auto; /* Footer */
     }
   }
 </style>
@@ -52,5 +52,5 @@
   <LeftNav />
   <MainLayout />
   <!-- <Aside /> -->
-  <Footer />
+  <!-- <Footer /> -->
 </div>

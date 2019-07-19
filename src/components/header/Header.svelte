@@ -12,6 +12,8 @@
     h1 {
       color: $app-primary;
       margin: 0px;
+      font-weight: 200;
+      font-size: 3rem;
     }
   }
 </style>
