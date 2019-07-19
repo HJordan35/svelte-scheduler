@@ -24,13 +24,20 @@
     var lines = [];
     for (var i = 0; i < allTextLines.length; i++) {
       var data = allTextLines[i].split(";");
-      var tarr = [];
       for (var j = 0; j < data.length; j++) {
-        tarr.push(data[j]);
+        lines.push(data[j].split(','));
       }
-      lines.push(tarr);
     }
-    console.log(lines);
+    broadcastData(lines);
+  }
+
+  const broadcastData = (parsed) => {
+      let target = document.getElementById("reader");
+      const event = new CustomEvent('csv-loaded', {
+          detail: parsed,
+          bubbles: true
+      });
+      target.dispatchEvent(event);
   }
 </script>
 
@@ -44,6 +51,6 @@
   }
 </style>
 
-<div class="reader-container">
+<div id="reader" class="reader-container">
   <input type="file" id="fileInput" on:change={loadFile} />
 </div>
