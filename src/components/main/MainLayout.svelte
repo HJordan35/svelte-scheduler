@@ -6,6 +6,8 @@
   import { APP_COLORS } from "../../constants/AppConstants.js";
   import { onMount } from "svelte";
 
+  import {indexHours} from "../../utilities/aggregators";
+
   let numberedDateList = [];
   let peopleCards = [];
 
@@ -17,6 +19,12 @@
   const renderSchedule = event => {
     let parsedCSV = event.detail;
     numberedDateList = parsedCSV[1];
+    
+    /**
+     * Pass the numberDateList and the list of people arrays in order
+     * to form an indexed set by person
+     */ 
+    indexHours(numberedDateList, parsedCSV.slice(2))
 
     /**
      * Loop thru the poeple rows and push them to the cards list
