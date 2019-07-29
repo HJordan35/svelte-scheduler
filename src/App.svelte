@@ -17,12 +17,12 @@
     display: grid;
 
     grid-template-areas:
-      "nav header header"
-      "nav content content"
-      "nav content content";
+      "nav header"
+      "nav content"
+      "nav content";
 
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: 85px 1fr 24px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 85px 1fr;
 
     min-height: 100vh;
   }

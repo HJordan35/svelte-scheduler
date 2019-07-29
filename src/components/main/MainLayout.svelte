@@ -33,6 +33,7 @@
   @import "../../scss/abstracts/variables";
   .container {
     overflow: scroll;
+    justify-content: center;
     grid-area: content;
     display: flex;
     flex-direction: row;

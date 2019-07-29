@@ -13,7 +13,7 @@
   @import "../../scss/abstracts/variables";
   .main-card {
     margin: 0;
-    min-height: 200px;
+    height: 200px;
     position: relative;
     flex: 0 0 325px;
     display: flex;
