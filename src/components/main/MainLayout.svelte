@@ -8,7 +8,6 @@
 
   import {indexHours} from "../../utilities/aggregators";
 
-  let numberedDateList = [];
   let peopleCards = [];
 
   onMount(() => {
@@ -18,23 +17,15 @@
 
   const renderSchedule = event => {
     let parsedCSV = event.detail;
-    numberedDateList = parsedCSV[1];
-    
-    /**
-     * Pass the numberDateList and the list of people arrays in order
-     * to form an indexed set by person
-     */ 
-    indexHours(numberedDateList, parsedCSV.slice(2))
+    let numberedDateList = parsedCSV[1];
+    let peopleList = indexHours(numberedDateList, parsedCSV.slice(2))
 
     /**
-     * Loop thru the poeple rows and push them to the cards list
-     * to generate a people card component only when a name exists
+     * Loop thru the poeple list and push them to the cards list
      */
-    for (let i = 2; i < parsedCSV.length; i++) {
-      if (parsedCSV[i][0] !== "") {
-        peopleCards = [...peopleCards, parsedCSV[i]];
-      }
-    }
+    peopleList.forEach(person => {
+       peopleCards = [...peopleCards, person];
+    });
   };
 </script>
 

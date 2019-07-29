@@ -3,22 +3,8 @@
   import { slide } from "svelte/transition";
   import { scale } from "svelte/transition";
 
-  import { onMount } from "svelte";
   export let position = 0;
-  export let person = [];
-
-  //Person Properties
-  let name = "";
-  let charName = "";
-
-  onMount(() => {
-    formatPerson();
-  });
-
-  const formatPerson = () => {
-    let matches = person[0].match(/\((.*?)\)/);
-    name = matches ? matches[1] : person[0];
-  };
+  export let person = {};
 </script>
 
 <style type="text/scss">
@@ -73,7 +59,8 @@
   transition:fade={{ delay: position * 150, duration: 300 }}>
   <div class="style-line" transition:scale="{{delay: position * 150 + 750, duration: 300, opacity: 0, start: 0}}"/>
   <div class="icon" transition:slide="{{delay: position * 150 + 300, duration: 300 }}">
-    <div class="icon__name">{name && name.substring(0, 1).toUpperCase()}</div>
+    <div class="icon__name">{person.name && person.charName}</div>
   </div>
-  <h1 transition:fade="{{ delay: position * 150 + 750, duration: 300 }}">{name}</h1>
+  <h1 transition:fade="{{ delay: position * 150 + 750, duration: 300 }}">{person.name}</h1>
+
 </div>
