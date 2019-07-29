@@ -16,9 +16,10 @@ export const indexHours = (numberDateList, personArrayList) => {
           totalHours: 0,
           weekdayHours: 0,
           weekendHours: 0,
+          holidayHours: 0,
+          ptoHours: 0,
           longestStreak: 0,
           checkStreak: 0,
-          checkHoliday: 0
         };
       } else {
         let numericHourValue = +personData;
@@ -29,7 +30,8 @@ export const indexHours = (numberDateList, personArrayList) => {
           checkStreak(personObj, numericHourValue);
         } else {
           checkStreak(personObj, numericHourValue);
-          aggregateHolidayAndPTO(personObj, personData);
+          aggregateHoliday(personObj, personData);
+          aggregatePTO(personObj, personData);
         }
       }
     });
@@ -64,12 +66,16 @@ const checkStreak = (personObj, hourValue) => {
   }
 };
 
-const aggregateHolidayAndPTO = (personObj, hourValue) => {
+const aggregateHoliday = (personObj, hourValue) => {
   if (hourValue === 'H') {
-    personObj.checkHoliday += 8;
-  } else if (hourValue === 'V/10') {
-    personObj.checkHoliday += 10;
+    personObj.holidayHours += 8;
+  }
+};
+
+const aggregatePTO = (personObj, hourValue) => {
+  if (hourValue === 'V/10') {
+    personObj.ptoHours += 10;
   } else if (hourValue === 'V') {
-    personObj.checkHoliday += 8;
+    personObj.ptoHours += 8;
   }
 };
