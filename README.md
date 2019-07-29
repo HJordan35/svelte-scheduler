@@ -1,3 +1,7 @@
+*NOTE: Security vulnerability can be disregarded as it is an dependency issue with LiveReload which will not go to production - see [GitHub Issue](https://github.com/sveltejs/template/issues/52)*
+
+---
+
 # simple svelte visualizer
 
 This is a demonstration application that I have created to help me learn svelte by tackling a practical problem. 
