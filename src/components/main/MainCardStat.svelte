@@ -1,5 +1,5 @@
 <script>
-  import { fly } from "svelte/transition";
+  import { fly, fade } from "svelte/transition";
   import { cubicOut } from "svelte/easing";
 
   export let statName = string;
@@ -51,10 +51,10 @@
 </style>
 
 <div class="stat-container">
-  <h2>{statName}</h2>
+  <h2 transition:fade={{ delay: animationDelay, duration: 600 }}>{statName}</h2>
   <div
     class="stat-bar"
     style="flex: {statWidth}"
     transition:grow={{ delay: animationDelay, duration: 600, width: statWidth }} />
-  <h3>{statValue}</h3>
+  <h3 transition:fade={{ delay: animationDelay, duration: 600 }}>{statValue}</h3>
 </div>
