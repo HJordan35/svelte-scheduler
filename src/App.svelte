@@ -48,7 +48,7 @@
 </style>
 
 <div class="app">
-  <Header headline="Set Calendar" />
+  <Header headline="Visualize Calendar" />
   <LeftNav />
   <MainLayout />
   <!-- <Aside /> -->
