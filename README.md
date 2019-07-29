@@ -1,20 +1,13 @@
-*Psst  looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# simple svelte visualizer
 
----
+This is a demonstration application that I have created to help me learn svelte by tackling a practical problem. 
 
-# svelte app
+The application can take a templated schedule (.csv) and create a visual display of the information to make it easier to undertsand specific metrics about each person in the schedule.
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
+*Try it out by running the app and uploading the sample .csv file found in the ~/demo directory!*
+<p align="center">
+    <img width="640" src="demo/readme_demo.gif">
+</p>
 
 ## Get started
 
